@@ -1,0 +1,15 @@
+<?php
+
+namespace {{ namespace }};
+
+use Omalizadeh\ApiResponse\Resources\BaseApiResource;
+
+class {{ class }} extends BaseApiResource
+{
+    protected function transformDataItem($item): array
+    {
+        return [
+            //
+        ];
+    }
+}

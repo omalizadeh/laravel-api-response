@@ -7,10 +7,10 @@ use Illuminate\Http\Response as HttpResponse;
 
 class ApiError extends Response
 {
-    private array $errors;
+    private ?array $errors;
 
     public function errors(
-        array $errors,
+        ?array $errors,
         int $status = HttpResponse::HTTP_UNPROCESSABLE_ENTITY,
     ): self {
         $this->errors = $errors;

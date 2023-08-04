@@ -8,7 +8,7 @@ class ApiData extends Response
 {
     private array|null|object $data = null;
 
-    public function data($data): self
+    public function data(array|null|object $data): self
     {
         $this->data = $data;
 

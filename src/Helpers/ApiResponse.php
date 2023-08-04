@@ -17,17 +17,17 @@ class ApiResponse
         return (new ApiData())->data($data);
     }
 
-    public function message(string $message): ApiData
+    public function message(?string $message): ApiData
     {
         return (new ApiData())->message($message);
     }
 
-    public function errorMessage(string $message, int $status = Response::HTTP_UNPROCESSABLE_ENTITY): ApiData
+    public function errorMessage(?string $message, int $status = Response::HTTP_UNPROCESSABLE_ENTITY): ApiData
     {
         return (new ApiData())->message($message)->status($status);
     }
 
-    public function errors(array $errors, int $status = Response::HTTP_UNPROCESSABLE_ENTITY): ApiError
+    public function errors(?array $errors, int $status = Response::HTTP_UNPROCESSABLE_ENTITY): ApiError
     {
         return (new ApiError())->errors($errors, $status);
     }

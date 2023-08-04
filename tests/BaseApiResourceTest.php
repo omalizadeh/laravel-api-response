@@ -41,7 +41,7 @@ class BaseApiResourceTest extends TestCase
         $resource = (new BaseApiResource(['data' => $data]))->toArray();
 
         $this->assertIsObject($resource['data']);
-        $this->assertObjectHasAttribute('key', $resource['data']);
+        $this->assertTrue(isset($resource['data']->key));
         $this->assertEquals('value', $resource['data']->key);
     }
 
